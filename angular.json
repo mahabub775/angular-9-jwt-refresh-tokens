@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-9-jwt-refresh-tokens"
+    }
+  },
+  "defaultProject": "angular-9-jwt-refresh-tokens",
+  "cli": {
+    "analytics": "e7f21eae-e137-46ea-bd3e-fca452c30d3d"
+  }
 }

@@ -14,4 +14,20 @@ export class AppComponent {
     logout() {
         this.authenticationService.logout();
     }
+    Refresh()
+    {
+         let dd:any =  this.GetRefresh();
+    }
+    // jokhoni call korbe ai function/ ai rokom controller e likhe use kore call 
+    //[HttpGet("{id}/refresh-tokens")]       //  for controller use , it is direct check refresh token & also get or post
+    //public IActionResult GetRefreshTokens(int id)
+GetRefresh()
+    {
+        return new Promise(resolve =>  {
+            // attempt to refresh token on app start up to auto authenticate
+            this.authenticationService.refreshToken()
+                .subscribe()
+                .add(resolve);
+        });
+    }
 }
